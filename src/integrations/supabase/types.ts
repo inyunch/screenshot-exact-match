@@ -14,7 +14,198 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      lakes: {
+        Row: {
+          acres: number | null
+          ais_found_ss: boolean | null
+          ais_found_zm: boolean | null
+          ais_survey_year: number | null
+          chl_2018: number | null
+          chl_2019: number | null
+          chl_2020: number | null
+          chl_2021: number | null
+          chl_2022: number | null
+          chl_2023: number | null
+          chl_mean: number | null
+          chl_percentile: number | null
+          chl_slope: number | null
+          county: string | null
+          exposure: number | null
+          flag_busy_access: boolean | null
+          flag_clarity_rising: boolean | null
+          flag_near_source: boolean | null
+          infested: boolean | null
+          infested_within_25km: number | null
+          lake_id: string
+          lat: number | null
+          lon: number | null
+          max_depth_m: number | null
+          n_launches: number | null
+          n_wash_stations: number | null
+          name: string | null
+          nearest_infested_km: number | null
+          risk_percentile: number | null
+          risk_prob: number | null
+          risk_rank: number | null
+          risk_tier: string | null
+          secchi_2018: number | null
+          secchi_2019: number | null
+          secchi_2020: number | null
+          secchi_2021: number | null
+          secchi_2022: number | null
+          secchi_2023: number | null
+          secchi_mean: number | null
+          secchi_slope: number | null
+          septic_screen: string | null
+          ss_first_year: number | null
+          trailer_parking: number | null
+          zm_first_year: number | null
+        }
+        Insert: {
+          acres?: number | null
+          ais_found_ss?: boolean | null
+          ais_found_zm?: boolean | null
+          ais_survey_year?: number | null
+          chl_2018?: number | null
+          chl_2019?: number | null
+          chl_2020?: number | null
+          chl_2021?: number | null
+          chl_2022?: number | null
+          chl_2023?: number | null
+          chl_mean?: number | null
+          chl_percentile?: number | null
+          chl_slope?: number | null
+          county?: string | null
+          exposure?: number | null
+          flag_busy_access?: boolean | null
+          flag_clarity_rising?: boolean | null
+          flag_near_source?: boolean | null
+          infested?: boolean | null
+          infested_within_25km?: number | null
+          lake_id: string
+          lat?: number | null
+          lon?: number | null
+          max_depth_m?: number | null
+          n_launches?: number | null
+          n_wash_stations?: number | null
+          name?: string | null
+          nearest_infested_km?: number | null
+          risk_percentile?: number | null
+          risk_prob?: number | null
+          risk_rank?: number | null
+          risk_tier?: string | null
+          secchi_2018?: number | null
+          secchi_2019?: number | null
+          secchi_2020?: number | null
+          secchi_2021?: number | null
+          secchi_2022?: number | null
+          secchi_2023?: number | null
+          secchi_mean?: number | null
+          secchi_slope?: number | null
+          septic_screen?: string | null
+          ss_first_year?: number | null
+          trailer_parking?: number | null
+          zm_first_year?: number | null
+        }
+        Update: {
+          acres?: number | null
+          ais_found_ss?: boolean | null
+          ais_found_zm?: boolean | null
+          ais_survey_year?: number | null
+          chl_2018?: number | null
+          chl_2019?: number | null
+          chl_2020?: number | null
+          chl_2021?: number | null
+          chl_2022?: number | null
+          chl_2023?: number | null
+          chl_mean?: number | null
+          chl_percentile?: number | null
+          chl_slope?: number | null
+          county?: string | null
+          exposure?: number | null
+          flag_busy_access?: boolean | null
+          flag_clarity_rising?: boolean | null
+          flag_near_source?: boolean | null
+          infested?: boolean | null
+          infested_within_25km?: number | null
+          lake_id?: string
+          lat?: number | null
+          lon?: number | null
+          max_depth_m?: number | null
+          n_launches?: number | null
+          n_wash_stations?: number | null
+          name?: string | null
+          nearest_infested_km?: number | null
+          risk_percentile?: number | null
+          risk_prob?: number | null
+          risk_rank?: number | null
+          risk_tier?: string | null
+          secchi_2018?: number | null
+          secchi_2019?: number | null
+          secchi_2020?: number | null
+          secchi_2021?: number | null
+          secchi_2022?: number | null
+          secchi_2023?: number | null
+          secchi_mean?: number | null
+          secchi_slope?: number | null
+          septic_screen?: string | null
+          ss_first_year?: number | null
+          trailer_parking?: number | null
+          zm_first_year?: number | null
+        }
+        Relationships: []
+      }
+      metrics: {
+        Row: {
+          description: string | null
+          key: string
+          value: number | null
+        }
+        Insert: {
+          description?: string | null
+          key: string
+          value?: number | null
+        }
+        Update: {
+          description?: string | null
+          key?: string
+          value?: number | null
+        }
+        Relationships: []
+      }
+      nearest_sources: {
+        Row: {
+          distance_km: number | null
+          first_year: number | null
+          id: number
+          lake_id: string | null
+          source_county: string | null
+          source_lake_id: string | null
+          source_name: string | null
+          species: string | null
+        }
+        Insert: {
+          distance_km?: number | null
+          first_year?: number | null
+          id?: never
+          lake_id?: string | null
+          source_county?: string | null
+          source_lake_id?: string | null
+          source_name?: string | null
+          species?: string | null
+        }
+        Update: {
+          distance_km?: number | null
+          first_year?: number | null
+          id?: never
+          lake_id?: string | null
+          source_county?: string | null
+          source_lake_id?: string | null
+          source_name?: string | null
+          species?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
