@@ -43,6 +43,10 @@
   --color-water: var(--water);
   --color-water-deep: var(--water-deep);
   --color-pine: var(--pine);
+  --color-ibm-blue: var(--ibm-blue);
+  --color-ibm-blue-deep: var(--ibm-blue-deep);
+  --color-ibm-blue-soft: var(--ibm-blue-soft);
+  --color-diagram-surface: var(--diagram-surface);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -110,6 +114,12 @@
   --water: oklch(0.72 0.08 225);
   --water-deep: oklch(0.38 0.09 242);
   --pine: oklch(0.45 0.06 165);
+  /* IBM accent: used only on the "How we used IBM" page. */
+  --ibm-blue: oklch(0.5565 0.243 261.95);
+  --ibm-blue-deep: oklch(0.454 0.221 262.63);
+  --ibm-blue-soft: oklch(0.9555 0.0212 259.19);
+  /* Always white, even in dark mode, so the architecture diagram stays readable. */
+  --diagram-surface: oklch(1 0 0);
   --info: oklch(0.96 0.025 230);
   --info-foreground: oklch(0.33 0.09 242);
   --info-border: oklch(0.85 0.05 232);

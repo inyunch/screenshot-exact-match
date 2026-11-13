@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Bot, Info, Flame, Droplets, Map as MapIcon, Waves } from "lucide-react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Waves } from "lucide-react";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { AppNav, TAB_KEYS, type TabKey } from "@/components/radar/AppNav";
 import { AgentTab } from "@/components/radar/AgentTab";
 import { LakeDetailTab } from "@/components/radar/LakeDetailTab";
 import { RiskMapTab } from "@/components/radar/RiskMapTab";
@@ -10,14 +10,11 @@ import { ProjectTab } from "@/components/radar/ProjectTab";
 import { SepticTab } from "@/components/radar/SepticTab";
 import { DEFAULT_LAKE_ID } from "@/lib/lake-rules";
 
-const TABS = ["project", "map", "quagga", "lake", "septic", "agent"] as const;
-type TabKey = (typeof TABS)[number];
-
 type Search = { tab?: TabKey | undefined; lake?: string | undefined };
 
 export const Route = createFileRoute("/")({
   validateSearch: (s: Record<string, unknown>): Search => ({
-    tab: TABS.includes(s["tab"] as TabKey) ? (s["tab"] as TabKey) : undefined,
+    tab: TAB_KEYS.includes(s["tab"] as TabKey) ? (s["tab"] as TabKey) : undefined,
     lake:
       typeof s["lake"] === "string" && /^[A-Z0-9]{4,20}$/.test(s["lake"]) ? s["lake"] : undefined,
   }),
@@ -42,27 +39,20 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const TAB_META: { key: TabKey; label: string; icon: typeof MapIcon }[] = [
-  { key: "project", label: "Project", icon: Info },
-  { key: "map", label: "Risk map", icon: MapIcon },
-  { key: "quagga", label: "Quagga Infestation", icon: Flame },
-  { key: "lake", label: "Lake detail", icon: Waves },
-  { key: "septic", label: "Septic screening", icon: Droplets },
-  { key: "agent", label: "Ask the agent", icon: Bot },
-];
-
 function Index() {
   const { tab = "project", lake = DEFAULT_LAKE_ID } = Route.useSearch();
   const navigate = Route.useNavigate();
 
-  const setTab = (t: string) =>
-    navigate({ search: (prev) => ({ ...prev, tab: t as TabKey }), replace: true, resetScroll: false });
   const openLake = (id: string) => {
     navigate({ search: { tab: "lake", lake: id }, resetScroll: false });
     if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" });
   };
   const changeLake = (id: string) =>
-    navigate({ search: (prev) => ({ ...prev, tab: "lake", lake: id }), replace: true, resetScroll: false });
+    navigate({
+      search: (prev) => ({ ...prev, tab: "lake", lake: id }),
+      replace: true,
+      resetScroll: false,
+    });
 
   return (
     <TooltipProvider delayDuration={150}>
@@ -87,45 +77,19 @@ function Index() {
           </div>
         </header>
 
-        <Tabs value={tab} onValueChange={setTab}>
-          <div className="sticky top-0 z-[1000] border-b border-border bg-background/90 backdrop-blur">
-            <div className="mx-auto max-w-6xl px-4 sm:px-6">
-              <TabsList className="tab-rail h-auto w-full justify-start gap-1 overflow-x-auto rounded-none bg-transparent p-0">
-                {TAB_META.map(({ key, label, icon: Icon }) => (
-                  <TabsTrigger
-                    key={key}
-                    value={key}
-                    className="shrink-0 gap-2 rounded-none border-b-2 border-transparent px-3 py-3 text-sm data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:text-primary data-[state=active]:shadow-none"
-                  >
-                    <Icon className="h-4 w-4" aria-hidden />
-                    {label}
-                  </TabsTrigger>
-                ))}
-              </TabsList>
-            </div>
-          </div>
+        <AppNav active={tab} />
 
-          <main className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-8">
-            <TabsContent value="project" className="mt-0">
-              <ProjectTab />
-            </TabsContent>
-            <TabsContent value="map" className="mt-0">
-              <RiskMapTab onOpenLake={openLake} />
-            </TabsContent>
-            <TabsContent value="quagga" className="mt-0">
-              <QuaggaTab />
-            </TabsContent>
-            <TabsContent value="lake" className="mt-0">
-              <LakeDetailTab lakeId={lake} onChangeLake={changeLake} />
-            </TabsContent>
-            <TabsContent value="septic" className="mt-0">
-              <SepticTab onOpenLake={openLake} />
-            </TabsContent>
-            <TabsContent value="agent" className="mt-0" forceMount hidden={tab !== "agent"}>
-              <AgentTab />
-            </TabsContent>
-          </main>
-        </Tabs>
+        <main className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-8">
+          {tab === "project" && <ProjectTab />}
+          {tab === "map" && <RiskMapTab onOpenLake={openLake} />}
+          {tab === "quagga" && <QuaggaTab />}
+          {tab === "lake" && <LakeDetailTab lakeId={lake} onChangeLake={changeLake} />}
+          {tab === "septic" && <SepticTab onOpenLake={openLake} />}
+          {/* Always mounted so the chat keeps its history while another tab is open. */}
+          <div hidden={tab !== "agent"}>
+            <AgentTab />
+          </div>
+        </main>
 
         <footer className="border-t border-border bg-surface">
           <div className="mx-auto max-w-6xl px-4 py-6 text-xs leading-relaxed text-muted-foreground sm:px-6">
