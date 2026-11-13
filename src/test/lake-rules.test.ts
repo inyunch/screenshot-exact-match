@@ -35,7 +35,7 @@ describe("septic screening eligibility", () => {
     const lakes = Array.from({ length: 60 }, (_, i) => lake({ name: `L${i}`, chl_mean: i }));
     const top = topByAlgae(lakes, null);
     expect(top).toHaveLength(50);
-    expect(top[0].chl_mean).toBe(59);
+    expect(top[0]?.chl_mean).toBe(59);
   });
 });
 
@@ -48,7 +48,7 @@ describe("top survey priorities", () => {
     ];
     const top = topSurveyPriorities(lakes, "Kalamazoo");
     expect(top).toHaveLength(25);
-    expect(top[0].risk_rank).toBe(1);
+    expect(top[0]?.risk_rank).toBe(1);
     expect(top.at(-1)?.risk_rank).toBe(25);
   });
 });

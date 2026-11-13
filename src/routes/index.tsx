@@ -11,12 +11,13 @@ import { DEFAULT_LAKE_ID } from "@/lib/lake-rules";
 const TABS = ["map", "lake", "septic", "agent"] as const;
 type TabKey = (typeof TABS)[number];
 
-type Search = { tab?: TabKey; lake?: string };
+type Search = { tab?: TabKey | undefined; lake?: string | undefined };
 
 export const Route = createFileRoute("/")({
   validateSearch: (s: Record<string, unknown>): Search => ({
-    tab: TABS.includes(s.tab as TabKey) ? (s.tab as TabKey) : undefined,
-    lake: typeof s.lake === "string" && /^[A-Z0-9]{4,20}$/.test(s.lake) ? s.lake : undefined,
+    tab: TABS.includes(s["tab"] as TabKey) ? (s["tab"] as TabKey) : undefined,
+    lake:
+      typeof s["lake"] === "string" && /^[A-Z0-9]{4,20}$/.test(s["lake"]) ? s["lake"] : undefined,
   }),
   head: () => ({
     meta: [

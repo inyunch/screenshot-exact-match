@@ -11,6 +11,7 @@ import {
   isSepticEligible,
   lakeLabel,
   radiusForAcres,
+  septicColor,
   topByAlgae,
 } from "@/lib/lake-rules";
 import { CountySelect } from "./CountySelect";
@@ -40,7 +41,7 @@ export function SepticTab({ onOpenLake }: { onOpenLake: (id: string) => void }) 
           id: l.lake_id,
           lat: l.lat as number,
           lon: l.lon as number,
-          color: SEPTIC_COLORS[l.septic_screen ?? "No data"] ?? SEPTIC_COLORS["No data"],
+          color: septicColor(l.septic_screen),
           radius: radiusForAcres(l.acres),
           tooltip:
             `<strong>${escapeHtml(lakeLabel(l))}</strong>` +
@@ -102,7 +103,7 @@ export function SepticTab({ onOpenLake }: { onOpenLake: (id: string) => void }) 
                   <TableCell className="whitespace-nowrap text-right">{formatTrend(l.chl_slope, "µg/L/yr")}</TableCell>
                   <TableCell>
                     <span className="inline-flex items-center gap-1.5 whitespace-nowrap">
-                      <ColorDot color={SEPTIC_COLORS[l.septic_screen ?? "No data"] ?? SEPTIC_COLORS["No data"]} />
+                      <ColorDot color={septicColor(l.septic_screen)} />
                       {l.septic_screen ?? "No data"}
                     </span>
                   </TableCell>

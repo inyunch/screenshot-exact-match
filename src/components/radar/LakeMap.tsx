@@ -12,7 +12,13 @@ export type MapPoint = {
   tooltip: string; // pre-escaped HTML
 };
 
-function PointsLayer({ points, onSelect }: { points: MapPoint[]; onSelect?: (id: string) => void }) {
+function PointsLayer({
+  points,
+  onSelect,
+}: {
+  points: MapPoint[];
+  onSelect?: ((id: string) => void) | undefined;
+}) {
   const map = useMap();
   useEffect(() => {
     const renderer = L.canvas({ padding: 0.5 });
@@ -43,7 +49,7 @@ export default function LakeMap({
   onSelect,
 }: {
   points: MapPoint[];
-  onSelect?: (id: string) => void;
+  onSelect?: ((id: string) => void) | undefined;
 }) {
   return (
     <MapContainer

@@ -16,12 +16,17 @@ export const TIER_COLORS: Record<Tier, string> = {
 };
 
 export const SEPTIC_LEVELS = ["High", "Elevated", "Low"] as const;
-export const SEPTIC_COLORS: Record<string, string> = {
+export type SepticLevel = (typeof SEPTIC_LEVELS)[number] | "No data";
+export const SEPTIC_COLORS: Record<SepticLevel, string> = {
   High: "#9640A0",
   Elevated: "#D28CDC",
   Low: "#AAC8AA",
   "No data": "#C8C8C8",
 };
+
+export function septicColor(screen: string | null) {
+  return SEPTIC_COLORS[(screen ?? "No data") as SepticLevel] ?? SEPTIC_COLORS["No data"];
+}
 
 export const DEFAULT_LAKE_ID = "MI39004400"; // Morrow Lake (Kalamazoo)
 

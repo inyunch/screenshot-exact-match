@@ -57,13 +57,28 @@ export const allLakesQuery = queryOptions({
   staleTime: Infinity,
 });
 
+export type MetricKey =
+  | "test_auc"
+  | "precision_top_25"
+  | "base_rate"
+  | "lift_top_25"
+  | "share_new_in_top_10pct"
+  | "n_new_infested_test"
+  | "n_candidates_test"
+  | "egle_survey_auc"
+  | "egle_survey_n_lakes"
+  | "n_lakes"
+  | "n_infested_now"
+  | "chosen_beta";
+export type Metrics = { [K in MetricKey]?: number | undefined };
+
 export const metricsQuery = queryOptions({
   queryKey: ["metrics"],
   queryFn: async () => {
     const { data, error } = await supabase.from("metrics").select("key,value");
     if (error) throw error;
-    const out: Record<string, number> = {};
-    for (const r of data ?? []) if (r.value != null) out[r.key] = r.value;
+    const out: Metrics = {};
+    for (const r of data ?? []) if (r.value != null) out[r.key as MetricKey] = r.value;
     return out;
   },
   staleTime: Infinity,

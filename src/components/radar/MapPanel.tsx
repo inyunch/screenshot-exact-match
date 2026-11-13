@@ -19,7 +19,7 @@ export function MapPanel({
   legend,
 }: {
   points: MapPoint[];
-  onSelect?: (id: string) => void;
+  onSelect?: ((id: string) => void) | undefined;
   loading?: boolean;
   legend: { label: string; color: string }[];
 }) {
