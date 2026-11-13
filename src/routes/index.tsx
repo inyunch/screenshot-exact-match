@@ -1,15 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Bot, Flame, Droplets, Map as MapIcon, Waves } from "lucide-react";
+import { Bot, Info, Flame, Droplets, Map as MapIcon, Waves } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AgentTab } from "@/components/radar/AgentTab";
 import { LakeDetailTab } from "@/components/radar/LakeDetailTab";
 import { RiskMapTab } from "@/components/radar/RiskMapTab";
 import { QuaggaTab } from "@/components/radar/QuaggaTab";
+import { ProjectTab } from "@/components/radar/ProjectTab";
 import { SepticTab } from "@/components/radar/SepticTab";
 import { DEFAULT_LAKE_ID } from "@/lib/lake-rules";
 
-const TABS = ["map", "quagga", "lake", "septic", "agent"] as const;
+const TABS = ["project", "map", "quagga", "lake", "septic", "agent"] as const;
 type TabKey = (typeof TABS)[number];
 
 type Search = { tab?: TabKey | undefined; lake?: string | undefined };
@@ -42,6 +43,7 @@ export const Route = createFileRoute("/")({
 });
 
 const TAB_META: { key: TabKey; label: string; icon: typeof MapIcon }[] = [
+  { key: "project", label: "Project", icon: Info },
   { key: "map", label: "Risk map", icon: MapIcon },
   { key: "quagga", label: "Quagga Infestation", icon: Flame },
   { key: "lake", label: "Lake detail", icon: Waves },
@@ -50,7 +52,7 @@ const TAB_META: { key: TabKey; label: string; icon: typeof MapIcon }[] = [
 ];
 
 function Index() {
-  const { tab = "map", lake = DEFAULT_LAKE_ID } = Route.useSearch();
+  const { tab = "project", lake = DEFAULT_LAKE_ID } = Route.useSearch();
   const navigate = Route.useNavigate();
 
   const setTab = (t: string) =>
@@ -104,6 +106,9 @@ function Index() {
           </div>
 
           <main className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-8">
+            <TabsContent value="project" className="mt-0">
+              <ProjectTab />
+            </TabsContent>
             <TabsContent value="map" className="mt-0">
               <RiskMapTab onOpenLake={openLake} />
             </TabsContent>
