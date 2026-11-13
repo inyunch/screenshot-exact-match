@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640" role="img" font-family="IBM Plex Sans, system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <title>Architecture: web app, server, watsonx Orchestrate agent with Granite, six tools, precomputed results, Python pipeline, Orchestrate ADK.</title>
+  <defs>
+    <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0F62FE" />
+    </marker>
+    <marker id="arwG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6F6F6F" />
+    </marker>
+  </defs>
+
+  <rect width="1200" height="640" fill="#ffffff" />
+
+  <text x="30" y="38" font-size="14" font-weight="600" fill="#161616">Lake Invasion Risk Radar — how the pieces connect</text>
+
+  <!-- Web app -->
+  <rect x="30" y="100" width="200" height="100" rx="10" fill="#ffffff" stroke="#C6C6C6" stroke-width="1.5" />
+  <text x="130" y="145" text-anchor="middle" font-size="15" font-weight="600" fill="#161616">Web app</text>
+  <text x="130" y="166" text-anchor="middle" font-size="11" fill="#525252">React + TanStack Start</text>
+
+  <!-- Our server -->
+  <rect x="300" y="100" width="200" height="100" rx="10" fill="#ffffff" stroke="#C6C6C6" stroke-width="1.5" />
+  <text x="400" y="145" text-anchor="middle" font-size="15" font-weight="600" fill="#161616">Our server</text>
+  <text x="400" y="166" text-anchor="middle" font-size="10.5" fill="#525252">server function · holds the IBM key</text>
+
+  <!-- Agent -->
+  <rect x="570" y="60" width="590" height="250" rx="12" fill="#F4F8FF" stroke="#0F62FE" stroke-width="2" />
+  <text x="590" y="92" font-size="18" font-weight="600" fill="#0043CE">IBM watsonx Orchestrate agent</text>
+  <text x="590" y="113" font-size="12" fill="#525252">model: IBM Granite</text>
+
+  <g font-size="11.5" font-weight="500" fill="#0043CE" text-anchor="middle">
+    <rect x="590" y="130" width="175" height="42" rx="8" fill="#E8F1FF" stroke="#0F62FE" stroke-width="1" />
+    <text x="677.5" y="155">Top-risk lakes</text>
+    <rect x="777" y="130" width="175" height="42" rx="8" fill="#E8F1FF" stroke="#0F62FE" stroke-width="1" />
+    <text x="864.5" y="155">Lake details</text>
+    <rect x="964" y="130" width="175" height="42" rx="8" fill="#E8F1FF" stroke="#0F62FE" stroke-width="1" />
+    <text x="1051.5" y="155">Nearest infested</text>
+    <rect x="590" y="182" width="175" height="42" rx="8" fill="#E8F1FF" stroke="#0F62FE" stroke-width="1" />
+    <text x="677.5" y="207">Action plan</text>
+    <rect x="777" y="182" width="175" height="42" rx="8" fill="#E8F1FF" stroke="#0F62FE" stroke-width="1" />
+    <text x="864.5" y="207">Model accuracy</text>
+    <rect x="964" y="182" width="175" height="42" rx="8" fill="#E8F1FF" stroke="#0F62FE" stroke-width="1" />
+    <text x="1051.5" y="207">Septic screening</text>
+  </g>
+  <text x="590" y="258" font-size="11.5" font-style="italic" fill="#525252">6 Python tools — every number comes from a tool, never from the model.</text>
+
+  <!-- Forward arrows -->
+  <line x1="230" y1="140" x2="300" y2="140" stroke="#0F62FE" stroke-width="1.8" marker-end="url(#arw)" />
+  <text x="265" y="132" text-anchor="middle" font-size="10.5" fill="#525252">question</text>
+  <line x1="500" y1="140" x2="570" y2="140" stroke="#0F62FE" stroke-width="1.8" marker-end="url(#arw)" />
+  <text x="535" y="132" text-anchor="middle" font-size="10.5" fill="#525252">chat API</text>
+
+  <!-- Return arrows -->
+  <line x1="570" y1="175" x2="500" y2="175" stroke="#6F6F6F" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arwG)" />
+  <text x="535" y="192" text-anchor="middle" font-size="10.5" fill="#6F6F6F">answer</text>
+  <line x1="300" y1="175" x2="230" y2="175" stroke="#6F6F6F" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arwG)" />
+  <text x="265" y="192" text-anchor="middle" font-size="10.5" fill="#6F6F6F">answer</text>
+
+  <!-- Precomputed results -->
+  <rect x="570" y="380" width="590" height="90" rx="10" fill="#ffffff" stroke="#C6C6C6" stroke-width="1.5" />
+  <text x="865" y="418" text-anchor="middle" font-size="15" font-weight="600" fill="#161616">Precomputed results</text>
+  <text x="865" y="440" text-anchor="middle" font-size="11.5" fill="#525252">USGS · Michigan DNR · EGLE public data</text>
+
+  <line x1="865" y1="310" x2="865" y2="380" stroke="#0F62FE" stroke-width="1.8" marker-end="url(#arw)" />
+  <text x="875" y="350" font-size="10.5" fill="#525252">tools read</text>
+
+  <!-- Python pipeline -->
+  <rect x="30" y="380" width="240" height="90" rx="10" fill="#ffffff" stroke="#C6C6C6" stroke-width="1.5" />
+  <text x="150" y="418" text-anchor="middle" font-size="15" font-weight="600" fill="#161616">Python pipeline</text>
+  <text x="150" y="440" text-anchor="middle" font-size="11.5" fill="#525252">scores computed offline</text>
+
+  <line x1="270" y1="425" x2="570" y2="425" stroke="#0F62FE" stroke-width="1.8" marker-end="url(#arw)" />
+  <text x="420" y="415" text-anchor="middle" font-size="10.5" fill="#525252">writes scores</text>
+
+  <!-- Orchestrate ADK -->
+  <rect x="300" y="520" width="240" height="80" rx="10" fill="#ffffff" stroke="#C6C6C6" stroke-width="1.5" stroke-dasharray="7 5" />
+  <text x="420" y="553" text-anchor="middle" font-size="15" font-weight="600" fill="#161616">Orchestrate ADK</text>
+  <text x="420" y="575" text-anchor="middle" font-size="11.5" fill="#525252">command-line kit</text>
+
+  <path d="M420,520 V250 H570" fill="none" stroke="#0F62FE" stroke-width="1.6" stroke-dasharray="6 5" marker-end="url(#arw)" />
+  <text x="432" y="390" font-size="10.5" fill="#525252">upload tools</text>
+  <text x="432" y="405" font-size="10.5" fill="#525252">deploy agent</text>
+
+  <text x="30" y="625" font-size="11" fill="#6F6F6F">The IBM API key stays on the server — the browser never sees it.</text>
+</svg>
