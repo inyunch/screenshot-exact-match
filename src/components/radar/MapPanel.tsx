@@ -22,7 +22,9 @@ export function MapPanel({
   footer,
   areas,
   heightClass,
+  bounds,
 }: {
+  bounds?: [[number, number], [number, number]];
   areas?: MapArea[];
   heightClass?: string;
   center?: [number, number];
@@ -41,7 +43,7 @@ export function MapPanel({
         ) : (
           <ClientOnly fallback={<MapPlaceholder label="Loading map…" />}>
             <Suspense fallback={<MapPlaceholder label="Loading map…" />}>
-              <LakeMap points={points} areas={areas} onSelect={onSelect} {...(center ? { center } : {})} {...(zoom ? { zoom } : {})} />
+              <LakeMap points={points} areas={areas} bounds={bounds} onSelect={onSelect} {...(center ? { center } : {})} {...(zoom ? { zoom } : {})} />
             </Suspense>
           </ClientOnly>
         )}

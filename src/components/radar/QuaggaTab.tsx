@@ -110,8 +110,7 @@ export function QuaggaTab() {
       <MapPanel
         points={[]}
         areas={areas}
-        center={[45.0, -83.6]}
-        zoom={7}
+        bounds={[[41.4, -92.1], [49.0, -75.8]]}
         heightClass="h-[480px] sm:h-[640px]"
         footer={`${latest.size} areas with a survey by ${year} · Erie basins shown separately`}
         legend={[

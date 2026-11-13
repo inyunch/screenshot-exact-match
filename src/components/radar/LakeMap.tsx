@@ -78,7 +78,9 @@ export default function LakeMap({
   center = [44.6, -85.4],
   zoom = 6,
   areas,
+  bounds,
 }: {
+  bounds?: [[number, number], [number, number]] | undefined;
   areas?: MapArea[] | undefined;
   points: MapPoint[];
   onSelect?: ((id: string) => void) | undefined;
@@ -87,8 +89,8 @@ export default function LakeMap({
 }) {
   return (
     <MapContainer
-      center={center}
-      zoom={zoom}
+      {...(bounds ? { bounds, boundsOptions: { padding: [8, 8] as [number, number] } } : { center, zoom })}
+      zoomSnap={0.25}
       minZoom={4}
       scrollWheelZoom={false}
       preferCanvas
