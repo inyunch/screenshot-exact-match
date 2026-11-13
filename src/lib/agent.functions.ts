@@ -9,5 +9,5 @@ const AgentInput = z.object({
 
 /** agent-chat: { message, thread_id } -> { answer (markdown), thread_id } or { error }. */
 export const agentChat = createServerFn({ method: "POST" })
-  .inputValidator((data: unknown) => AgentInput.parse(data))
+  .validator((data: unknown) => AgentInput.parse(data))
   .handler(async ({ data }) => callOrchestrate(data.message, data.thread_id));
