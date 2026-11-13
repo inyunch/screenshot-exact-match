@@ -70,7 +70,7 @@
   <text x="150" y="440" text-anchor="middle" font-size="11.5" fill="#525252">scores computed offline</text>
 
   <line x1="270" y1="425" x2="570" y2="425" stroke="#0F62FE" stroke-width="1.8" marker-end="url(#arw)" />
-  <text x="420" y="415" text-anchor="middle" font-size="10.5" fill="#525252">writes scores</text>
+  <text x="282" y="415" font-size="10.5" fill="#525252">writes scores</text>
 
   <!-- Orchestrate ADK -->
   <rect x="300" y="520" width="240" height="80" rx="10" fill="#ffffff" stroke="#C6C6C6" stroke-width="1.5" stroke-dasharray="7 5" />
