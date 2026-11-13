@@ -152,7 +152,7 @@ export function QuaggaTab() {
                         title={has ? `${a.lake} ${a.area}, ${y}: ${fmtD(d)}` : `${y}: no survey`}
                         onClick={() => setIdx(i)}
                         className={`h-7 w-9 cursor-pointer rounded-sm text-center text-[10px] ${y === year ? "ring-2 ring-primary" : ""}`}
-                        style={{ backgroundColor: has ? heatColor(d) : "transparent" }}
+                        style={{ backgroundColor: has ? heatColor(d) : "transparent", color: d != null && d >= 5000 ? "#fff" : undefined }}
                       >
                         {has && d != null && d >= 1000 ? `${Math.round(d / 100) / 10}k` : has && d != null ? Math.round(d) : ""}
                       </td>
