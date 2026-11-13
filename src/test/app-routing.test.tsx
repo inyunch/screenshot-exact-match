@@ -14,4 +14,10 @@ describe("App routing", () => {
 
     expect(matches.at(-1)?.routeId).not.toBe(rootRouteId);
   });
+
+  it("matches the How we used IBM page at /ibm", () => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+
+    expect(router.matchRoutes("/ibm").at(-1)?.routeId).toBe("/ibm");
+  });
 });
