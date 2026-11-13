@@ -47,15 +47,19 @@ function PointsLayer({
 export default function LakeMap({
   points,
   onSelect,
+  center = [44.6, -85.4],
+  zoom = 6,
 }: {
   points: MapPoint[];
   onSelect?: ((id: string) => void) | undefined;
+  center?: [number, number];
+  zoom?: number;
 }) {
   return (
     <MapContainer
-      center={[44.6, -85.4]}
-      zoom={6}
-      minZoom={5}
+      center={center}
+      zoom={zoom}
+      minZoom={4}
       scrollWheelZoom={false}
       preferCanvas
       style={{ height: "100%", width: "100%" }}

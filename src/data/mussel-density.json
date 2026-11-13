@@ -1,0 +1,1262 @@
+[
+{
+"lake": "Superior",
+"area": "Canadian nearshore monitoring sites",
+"year": 1992,
+"species": "Zebra",
+"density": 1.6,
+"se": null,
+"status": "measured",
+"source": "https://data.ontario.ca/en/dataset/benthic-invertebrate-community-great-lakes-nearshore-areas"
+},
+{
+"lake": "Ontario",
+"area": "Lakewide",
+"year": 1990,
+"species": "Quagga",
+"density": 0.0,
+"se": null,
+"status": "at_baseline_in_figure",
+"source": "https://repository.library.noaa.gov/view/noaa/57516/noaa_57516_DS1.pdf"
+},
+{
+"lake": "Superior",
+"area": "Canadian nearshore monitoring sites",
+"year": 1999,
+"species": "Zebra",
+"density": 0.0,
+"se": null,
+"status": "not_detected",
+"source": "https://data.ontario.ca/en/dataset/benthic-invertebrate-community-great-lakes-nearshore-areas"
+},
+{
+"lake": "Superior",
+"area": "Canadian nearshore monitoring sites",
+"year": 1992,
+"species": "Quagga",
+"density": 0.0,
+"se": null,
+"status": "not_detected",
+"source": "https://data.ontario.ca/en/dataset/benthic-invertebrate-community-great-lakes-nearshore-areas"
+},
+{
+"lake": "Superior",
+"area": "Canadian nearshore monitoring sites",
+"year": 2005,
+"species": "Zebra",
+"density": 0.0,
+"se": null,
+"status": "not_detected",
+"source": "https://data.ontario.ca/en/dataset/benthic-invertebrate-community-great-lakes-nearshore-areas"
+},
+{
+"lake": "Erie",
+"area": "Lakewide",
+"year": 1992,
+"species": "Quagga",
+"density": 530.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Superior",
+"area": "Canadian nearshore monitoring sites",
+"year": 2011,
+"species": "Zebra",
+"density": 0.0,
+"se": null,
+"status": "not_detected",
+"source": "https://data.ontario.ca/en/dataset/benthic-invertebrate-community-great-lakes-nearshore-areas"
+},
+{
+"lake": "Erie",
+"area": "Western basin",
+"year": 1992,
+"species": "Quagga",
+"density": 0.0,
+"se": null,
+"status": "at_baseline_in_figure",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Superior",
+"area": "Canadian nearshore monitoring sites",
+"year": 2019,
+"species": "Zebra",
+"density": 1.0,
+"se": null,
+"status": "measured",
+"source": "https://data.ontario.ca/en/dataset/benthic-invertebrate-community-great-lakes-nearshore-areas"
+},
+{
+"lake": "Erie",
+"area": "Central basin",
+"year": 1992,
+"species": "Quagga",
+"density": 130.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Erie",
+"area": "Eastern basin",
+"year": 1992,
+"species": "Quagga",
+"density": 1465.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Superior",
+"area": "EPA open-lake monitoring sites",
+"year": 2019,
+"species": "Zebra",
+"density": 0.0,
+"se": null,
+"status": "not_detected",
+"source": "https://stateofgreatlakes.net/wp-content/uploads/2026/06/DreissenidMusselsSubindicatorReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Lakewide",
+"year": 1993,
+"species": "Quagga",
+"density": 1865.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Superior",
+"area": "EPA open-lake monitoring sites",
+"year": 2021,
+"species": "Zebra",
+"density": 0.0,
+"se": null,
+"status": "not_detected",
+"source": "https://stateofgreatlakes.net/wp-content/uploads/2026/06/DreissenidMusselsSubindicatorReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Western basin",
+"year": 1993,
+"species": "Quagga",
+"density": 10.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Superior",
+"area": "EPA open-lake monitoring sites",
+"year": 2022,
+"species": "Zebra",
+"density": 0.0,
+"se": null,
+"status": "not_detected",
+"source": "https://stateofgreatlakes.net/wp-content/uploads/2026/06/DreissenidMusselsSubindicatorReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Central basin",
+"year": 1993,
+"species": "Quagga",
+"density": 1975.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Superior",
+"area": "EPA open-lake monitoring sites",
+"year": 2023,
+"species": "Zebra",
+"density": 0.0,
+"se": null,
+"status": "not_detected",
+"source": "https://stateofgreatlakes.net/wp-content/uploads/2026/06/DreissenidMusselsSubindicatorReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Eastern basin",
+"year": 1993,
+"species": "Quagga",
+"density": 3635.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Michigan",
+"area": "Lakewide, excluding Green Bay",
+"year": 1994,
+"species": "Zebra",
+"density": 188.0,
+"se": 116.0,
+"status": "measured",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeMichiganBenthosSurveyCSMI2021FinalReport.pdf"
+},
+{
+"lake": "Michigan",
+"area": "Lakewide, excluding Green Bay",
+"year": 1994,
+"species": "Quagga",
+"density": 0.0,
+"se": null,
+"status": "not_detected",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeMichiganBenthosSurveyCSMI2021FinalReport.pdf"
+},
+{
+"lake": "Michigan",
+"area": "Lakewide, excluding Green Bay",
+"year": 2000,
+"species": "Zebra",
+"density": 550.0,
+"se": 120.0,
+"status": "measured",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeMichiganBenthosSurveyCSMI2021FinalReport.pdf"
+},
+{
+"lake": "Ontario",
+"area": "Lakewide",
+"year": 1995,
+"species": "Quagga",
+"density": 400.0,
+"se": null,
+"status": "measured",
+"source": "https://repository.library.noaa.gov/view/noaa/57516/noaa_57516_DS1.pdf"
+},
+{
+"lake": "Michigan",
+"area": "Lakewide, excluding Green Bay",
+"year": 2005,
+"species": "Zebra",
+"density": 107.0,
+"se": 24.0,
+"status": "measured",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeMichiganBenthosSurveyCSMI2021FinalReport.pdf"
+},
+{
+"lake": "Ontario",
+"area": "Lakewide",
+"year": 1997,
+"species": "Quagga",
+"density": 339.0,
+"se": 111.0,
+"status": "measured",
+"source": "https://repository.library.noaa.gov/view/noaa/57516/noaa_57516_DS1.pdf"
+},
+{
+"lake": "Michigan",
+"area": "Lakewide, excluding Green Bay",
+"year": 2010,
+"species": "Zebra",
+"density": 0.0,
+"se": null,
+"status": "not_detected",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeMichiganBenthosSurveyCSMI2021FinalReport.pdf"
+},
+{
+"lake": "Ontario",
+"area": "Lakewide",
+"year": 1998,
+"species": "Quagga",
+"density": 980.0,
+"se": null,
+"status": "measured",
+"source": "https://repository.library.noaa.gov/view/noaa/57516/noaa_57516_DS1.pdf"
+},
+{
+"lake": "Michigan",
+"area": "Lakewide, excluding Green Bay",
+"year": 2015,
+"species": "Zebra",
+"density": 0.0,
+"se": null,
+"status": "not_detected",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeMichiganBenthosSurveyCSMI2021FinalReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Lakewide",
+"year": 1998,
+"species": "Quagga",
+"density": 3445.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Michigan",
+"area": "Lakewide, excluding Green Bay",
+"year": 2021,
+"species": "Zebra",
+"density": 0.0,
+"se": null,
+"status": "not_detected",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeMichiganBenthosSurveyCSMI2021FinalReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Western basin",
+"year": 1998,
+"species": "Quagga",
+"density": 155.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Huron",
+"area": "Main basin",
+"year": 2000,
+"species": "Zebra",
+"density": 80.0,
+"se": null,
+"status": "measured",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeHuronBenthosSurveyCSMI2022FinalReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Central basin",
+"year": 1998,
+"species": "Quagga",
+"density": 2955.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Huron",
+"area": "Main basin",
+"year": 2003,
+"species": "Zebra",
+"density": 70.0,
+"se": null,
+"status": "measured",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeHuronBenthosSurveyCSMI2022FinalReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Eastern basin",
+"year": 1998,
+"species": "Quagga",
+"density": 5300.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Huron",
+"area": "Main basin",
+"year": 2007,
+"species": "Zebra",
+"density": 0.0,
+"se": null,
+"status": "at_baseline_in_figure",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeHuronBenthosSurveyCSMI2022FinalReport.pdf"
+},
+{
+"lake": "Superior",
+"area": "Canadian nearshore monitoring sites",
+"year": 1999,
+"species": "Quagga",
+"density": 0.0,
+"se": null,
+"status": "not_detected",
+"source": "https://data.ontario.ca/en/dataset/benthic-invertebrate-community-great-lakes-nearshore-areas"
+},
+{
+"lake": "Huron",
+"area": "Main basin",
+"year": 2012,
+"species": "Zebra",
+"density": 0.0,
+"se": null,
+"status": "at_baseline_in_figure",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeHuronBenthosSurveyCSMI2022FinalReport.pdf"
+},
+{
+"lake": "Ontario",
+"area": "Lakewide",
+"year": 1999,
+"species": "Quagga",
+"density": 1700.0,
+"se": null,
+"status": "measured",
+"source": "https://repository.library.noaa.gov/view/noaa/57516/noaa_57516_DS1.pdf"
+},
+{
+"lake": "Huron",
+"area": "Main basin",
+"year": 2017,
+"species": "Zebra",
+"density": 0.0,
+"se": null,
+"status": "not_detected",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeHuronBenthosSurveyCSMI2022FinalReport.pdf"
+},
+{
+"lake": "Michigan",
+"area": "Lakewide, excluding Green Bay",
+"year": 2000,
+"species": "Quagga",
+"density": 11.0,
+"se": 6.0,
+"status": "measured",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeMichiganBenthosSurveyCSMI2021FinalReport.pdf"
+},
+{
+"lake": "Huron",
+"area": "Main basin",
+"year": 2022,
+"species": "Zebra",
+"density": 0.0,
+"se": null,
+"status": "not_detected",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeHuronBenthosSurveyCSMI2022FinalReport.pdf"
+},
+{
+"lake": "Huron",
+"area": "Main basin",
+"year": 2000,
+"species": "Quagga",
+"density": 0.0,
+"se": null,
+"status": "at_baseline_in_figure",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeHuronBenthosSurveyCSMI2022FinalReport.pdf"
+},
+{
+"lake": "Ontario",
+"area": "Lakewide",
+"year": 1990,
+"species": "Zebra",
+"density": 0.0,
+"se": null,
+"status": "at_baseline_in_figure",
+"source": "https://repository.library.noaa.gov/view/noaa/57516/noaa_57516_DS1.pdf"
+},
+{
+"lake": "Erie",
+"area": "Lakewide",
+"year": 2002,
+"species": "Quagga",
+"density": 1855.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Ontario",
+"area": "Lakewide",
+"year": 1995,
+"species": "Zebra",
+"density": 676.0,
+"se": 242.0,
+"status": "measured",
+"source": "https://repository.library.noaa.gov/view/noaa/57516/noaa_57516_DS1.pdf"
+},
+{
+"lake": "Erie",
+"area": "Western basin",
+"year": 2002,
+"species": "Quagga",
+"density": 255.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Ontario",
+"area": "Lakewide",
+"year": 1997,
+"species": "Zebra",
+"density": 283.0,
+"se": 151.0,
+"status": "measured",
+"source": "https://repository.library.noaa.gov/view/noaa/57516/noaa_57516_DS1.pdf"
+},
+{
+"lake": "Erie",
+"area": "Central basin",
+"year": 2002,
+"species": "Quagga",
+"density": 620.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Ontario",
+"area": "Lakewide",
+"year": 1998,
+"species": "Zebra",
+"density": 535.0,
+"se": null,
+"status": "measured",
+"source": "https://repository.library.noaa.gov/view/noaa/57516/noaa_57516_DS1.pdf"
+},
+{
+"lake": "Erie",
+"area": "Eastern basin",
+"year": 2002,
+"species": "Quagga",
+"density": 9500.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Ontario",
+"area": "Lakewide",
+"year": 1999,
+"species": "Zebra",
+"density": 45.0,
+"se": null,
+"status": "measured",
+"source": "https://repository.library.noaa.gov/view/noaa/57516/noaa_57516_DS1.pdf"
+},
+{
+"lake": "Huron",
+"area": "Main basin",
+"year": 2003,
+"species": "Quagga",
+"density": 325.0,
+"se": null,
+"status": "measured",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeHuronBenthosSurveyCSMI2022FinalReport.pdf"
+},
+{
+"lake": "Ontario",
+"area": "Lakewide",
+"year": 2003,
+"species": "Zebra",
+"density": 0.0,
+"se": null,
+"status": "at_baseline_in_figure",
+"source": "https://repository.library.noaa.gov/view/noaa/57516/noaa_57516_DS1.pdf"
+},
+{
+"lake": "Ontario",
+"area": "Lakewide",
+"year": 2003,
+"species": "Quagga",
+"density": 4638.0,
+"se": 907.0,
+"status": "measured",
+"source": "https://repository.library.noaa.gov/view/noaa/57516/noaa_57516_DS1.pdf"
+},
+{
+"lake": "Ontario",
+"area": "Lakewide",
+"year": 2008,
+"species": "Zebra",
+"density": 0.0,
+"se": null,
+"status": "not_detected",
+"source": "https://repository.library.noaa.gov/view/noaa/57516/noaa_57516_DS1.pdf"
+},
+{
+"lake": "Erie",
+"area": "Lakewide",
+"year": 2004,
+"species": "Quagga",
+"density": 715.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Ontario",
+"area": "Lakewide",
+"year": 2013,
+"species": "Zebra",
+"density": 0.0,
+"se": null,
+"status": "not_detected",
+"source": "https://repository.library.noaa.gov/view/noaa/57516/noaa_57516_DS1.pdf"
+},
+{
+"lake": "Erie",
+"area": "Western basin",
+"year": 2004,
+"species": "Quagga",
+"density": 1155.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Ontario",
+"area": "Lakewide",
+"year": 2018,
+"species": "Zebra",
+"density": 0.0,
+"se": null,
+"status": "not_detected",
+"source": "https://repository.library.noaa.gov/view/noaa/57516/noaa_57516_DS1.pdf"
+},
+{
+"lake": "Erie",
+"area": "Central basin",
+"year": 2004,
+"species": "Quagga",
+"density": 375.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Ontario",
+"area": "Lakewide",
+"year": 2023,
+"species": "Zebra",
+"density": null,
+"se": null,
+"status": "detected_density_unreported",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeOntarioBenthosSurveyCSMI2023FinalReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Eastern basin",
+"year": 2004,
+"species": "Quagga",
+"density": 1435.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Erie",
+"area": "Lakewide",
+"year": 1992,
+"species": "Zebra",
+"density": 2095.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Superior",
+"area": "Canadian nearshore monitoring sites",
+"year": 2005,
+"species": "Quagga",
+"density": 0.0,
+"se": null,
+"status": "not_detected",
+"source": "https://data.ontario.ca/en/dataset/benthic-invertebrate-community-great-lakes-nearshore-areas"
+},
+{
+"lake": "Erie",
+"area": "Lakewide",
+"year": 1993,
+"species": "Zebra",
+"density": 960.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Michigan",
+"area": "Lakewide, excluding Green Bay",
+"year": 2005,
+"species": "Quagga",
+"density": 4958.0,
+"se": 643.0,
+"status": "measured",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeMichiganBenthosSurveyCSMI2021FinalReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Lakewide",
+"year": 1998,
+"species": "Zebra",
+"density": 300.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Huron",
+"area": "Main basin",
+"year": 2007,
+"species": "Quagga",
+"density": 670.0,
+"se": null,
+"status": "measured",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeHuronBenthosSurveyCSMI2022FinalReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Lakewide",
+"year": 2002,
+"species": "Zebra",
+"density": 130.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Ontario",
+"area": "Lakewide",
+"year": 2008,
+"species": "Quagga",
+"density": 2480.0,
+"se": null,
+"status": "measured",
+"source": "https://repository.library.noaa.gov/view/noaa/57516/noaa_57516_DS1.pdf"
+},
+{
+"lake": "Erie",
+"area": "Lakewide",
+"year": 2004,
+"species": "Zebra",
+"density": 45.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Michigan",
+"area": "Lakewide, excluding Green Bay",
+"year": 2010,
+"species": "Quagga",
+"density": 7991.0,
+"se": 619.0,
+"status": "measured",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeMichiganBenthosSurveyCSMI2021FinalReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Lakewide",
+"year": 2011,
+"species": "Zebra",
+"density": 55.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Superior",
+"area": "Canadian nearshore monitoring sites",
+"year": 2011,
+"species": "Quagga",
+"density": 0.0,
+"se": null,
+"status": "not_detected",
+"source": "https://data.ontario.ca/en/dataset/benthic-invertebrate-community-great-lakes-nearshore-areas"
+},
+{
+"lake": "Erie",
+"area": "Lakewide",
+"year": 2014,
+"species": "Zebra",
+"density": 55.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Erie",
+"area": "Lakewide",
+"year": 2011,
+"species": "Quagga",
+"density": 375.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Erie",
+"area": "Lakewide",
+"year": 2019,
+"species": "Zebra",
+"density": 126.0,
+"se": 42.0,
+"status": "measured",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeErieBenthosSurveyCSMI2019FinalReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Western basin",
+"year": 2011,
+"species": "Quagga",
+"density": 1010.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Erie",
+"area": "Western basin",
+"year": 1992,
+"species": "Zebra",
+"density": 835.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Erie",
+"area": "Central basin",
+"year": 2011,
+"species": "Quagga",
+"density": 130.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Erie",
+"area": "Western basin",
+"year": 1993,
+"species": "Zebra",
+"density": 1200.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Erie",
+"area": "Eastern basin",
+"year": 2011,
+"species": "Quagga",
+"density": 735.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Erie",
+"area": "Western basin",
+"year": 1998,
+"species": "Zebra",
+"density": 265.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Huron",
+"area": "Main basin",
+"year": 2012,
+"species": "Quagga",
+"density": 1325.0,
+"se": null,
+"status": "measured",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeHuronBenthosSurveyCSMI2022FinalReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Western basin",
+"year": 2002,
+"species": "Zebra",
+"density": 275.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Ontario",
+"area": "Lakewide",
+"year": 2013,
+"species": "Quagga",
+"density": 3100.0,
+"se": null,
+"status": "measured",
+"source": "https://repository.library.noaa.gov/view/noaa/57516/noaa_57516_DS1.pdf"
+},
+{
+"lake": "Erie",
+"area": "Western basin",
+"year": 2004,
+"species": "Zebra",
+"density": 375.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Erie",
+"area": "Lakewide",
+"year": 2014,
+"species": "Quagga",
+"density": 1035.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Erie",
+"area": "Western basin",
+"year": 2011,
+"species": "Zebra",
+"density": 490.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Erie",
+"area": "Western basin",
+"year": 2014,
+"species": "Quagga",
+"density": 1825.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Erie",
+"area": "Western basin",
+"year": 2014,
+"species": "Zebra",
+"density": 435.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Erie",
+"area": "Central basin",
+"year": 2014,
+"species": "Quagga",
+"density": 575.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Erie",
+"area": "Western basin",
+"year": 2019,
+"species": "Zebra",
+"density": 515.0,
+"se": 169.0,
+"status": "measured",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeErieBenthosSurveyCSMI2019FinalReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Eastern basin",
+"year": 2014,
+"species": "Quagga",
+"density": 1900.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Erie",
+"area": "Central basin",
+"year": 1992,
+"species": "Zebra",
+"density": 995.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Michigan",
+"area": "Lakewide, excluding Green Bay",
+"year": 2015,
+"species": "Quagga",
+"density": 4428.0,
+"se": 398.0,
+"status": "measured",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeMichiganBenthosSurveyCSMI2021FinalReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Central basin",
+"year": 1993,
+"species": "Zebra",
+"density": 765.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Huron",
+"area": "Main basin",
+"year": 2017,
+"species": "Quagga",
+"density": 1510.0,
+"se": 278.0,
+"status": "measured",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeHuronBenthosSurveyCSMI2022FinalReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Central basin",
+"year": 1998,
+"species": "Zebra",
+"density": 0.0,
+"se": null,
+"status": "at_baseline_in_figure",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Ontario",
+"area": "Lakewide",
+"year": 2018,
+"species": "Quagga",
+"density": 4308.0,
+"se": 566.0,
+"status": "measured",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeOntarioBenthosSurveyCSMI2023FinalReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Central basin",
+"year": 2002,
+"species": "Zebra",
+"density": 15.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Superior",
+"area": "Canadian nearshore monitoring sites",
+"year": 2019,
+"species": "Quagga",
+"density": 0.0,
+"se": null,
+"status": "not_detected",
+"source": "https://data.ontario.ca/en/dataset/benthic-invertebrate-community-great-lakes-nearshore-areas"
+},
+{
+"lake": "Erie",
+"area": "Central basin",
+"year": 2004,
+"species": "Zebra",
+"density": 0.0,
+"se": null,
+"status": "at_baseline_in_figure",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Superior",
+"area": "EPA open-lake monitoring sites",
+"year": 2019,
+"species": "Quagga",
+"density": null,
+"se": null,
+"status": "detected_below_1_per_m2",
+"source": "https://stateofgreatlakes.net/wp-content/uploads/2026/06/DreissenidMusselsSubindicatorReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Central basin",
+"year": 2011,
+"species": "Zebra",
+"density": 0.0,
+"se": null,
+"status": "at_baseline_in_figure",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Erie",
+"area": "Lakewide",
+"year": 2019,
+"species": "Quagga",
+"density": 516.0,
+"se": 118.0,
+"status": "measured",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeErieBenthosSurveyCSMI2019FinalReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Central basin",
+"year": 2014,
+"species": "Zebra",
+"density": 15.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Erie",
+"area": "Western basin",
+"year": 2019,
+"species": "Quagga",
+"density": 270.0,
+"se": 85.0,
+"status": "measured",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeErieBenthosSurveyCSMI2019FinalReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Central basin",
+"year": 2019,
+"species": "Zebra",
+"density": 27.0,
+"se": 16.0,
+"status": "measured",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeErieBenthosSurveyCSMI2019FinalReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Central basin",
+"year": 2019,
+"species": "Quagga",
+"density": 357.0,
+"se": 196.0,
+"status": "measured",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeErieBenthosSurveyCSMI2019FinalReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Eastern basin",
+"year": 1992,
+"species": "Zebra",
+"density": 4535.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Erie",
+"area": "Eastern basin",
+"year": 2019,
+"species": "Quagga",
+"density": 1047.0,
+"se": 177.0,
+"status": "measured",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeErieBenthosSurveyCSMI2019FinalReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Eastern basin",
+"year": 1993,
+"species": "Zebra",
+"density": 1200.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Superior",
+"area": "EPA open-lake monitoring sites",
+"year": 2021,
+"species": "Quagga",
+"density": null,
+"se": null,
+"status": "detected_below_1_per_m2",
+"source": "https://stateofgreatlakes.net/wp-content/uploads/2026/06/DreissenidMusselsSubindicatorReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Eastern basin",
+"year": 1998,
+"species": "Zebra",
+"density": 500.0,
+"se": null,
+"status": "measured",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Michigan",
+"area": "Lakewide, excluding Green Bay",
+"year": 2021,
+"species": "Quagga",
+"density": 5826.0,
+"se": 933.0,
+"status": "measured",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeMichiganBenthosSurveyCSMI2021FinalReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Eastern basin",
+"year": 2002,
+"species": "Zebra",
+"density": 0.0,
+"se": null,
+"status": "at_baseline_in_figure",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Superior",
+"area": "EPA open-lake monitoring sites",
+"year": 2022,
+"species": "Quagga",
+"density": 0.0,
+"se": null,
+"status": "not_detected",
+"source": "https://stateofgreatlakes.net/wp-content/uploads/2026/06/DreissenidMusselsSubindicatorReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Eastern basin",
+"year": 2004,
+"species": "Zebra",
+"density": 0.0,
+"se": null,
+"status": "at_baseline_in_figure",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Huron",
+"area": "Main basin",
+"year": 2022,
+"species": "Quagga",
+"density": 1124.0,
+"se": 238.0,
+"status": "measured",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeHuronBenthosSurveyCSMI2022FinalReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Eastern basin",
+"year": 2011,
+"species": "Zebra",
+"density": 0.0,
+"se": null,
+"status": "at_baseline_in_figure",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Superior",
+"area": "EPA open-lake monitoring sites",
+"year": 2023,
+"species": "Quagga",
+"density": 0.0,
+"se": null,
+"status": "not_detected",
+"source": "https://stateofgreatlakes.net/wp-content/uploads/2026/06/DreissenidMusselsSubindicatorReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Eastern basin",
+"year": 2014,
+"species": "Zebra",
+"density": 0.0,
+"se": null,
+"status": "at_baseline_in_figure",
+"source": "https://doi.org/10.1016/j.jglr.2025.102706"
+},
+{
+"lake": "Ontario",
+"area": "Lakewide",
+"year": 2023,
+"species": "Quagga",
+"density": 2710.0,
+"se": 274.0,
+"status": "measured",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeOntarioBenthosSurveyCSMI2023FinalReport.pdf"
+},
+{
+"lake": "Erie",
+"area": "Eastern basin",
+"year": 2019,
+"species": "Zebra",
+"density": 6.0,
+"se": 4.0,
+"status": "measured",
+"source": "https://greatlakescenter.buffalostate.edu/sites/glc/files/documents/LakeErieBenthosSurveyCSMI2019FinalReport.pdf"
+}
+]

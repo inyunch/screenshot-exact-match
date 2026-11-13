@@ -1,14 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Bot, Droplets, Map as MapIcon, Waves } from "lucide-react";
+import { Bot, Flame, Droplets, Map as MapIcon, Waves } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AgentTab } from "@/components/radar/AgentTab";
 import { LakeDetailTab } from "@/components/radar/LakeDetailTab";
 import { RiskMapTab } from "@/components/radar/RiskMapTab";
+import { QuaggaTab } from "@/components/radar/QuaggaTab";
 import { SepticTab } from "@/components/radar/SepticTab";
 import { DEFAULT_LAKE_ID } from "@/lib/lake-rules";
 
-const TABS = ["map", "lake", "septic", "agent"] as const;
+const TABS = ["map", "quagga", "lake", "septic", "agent"] as const;
 type TabKey = (typeof TABS)[number];
 
 type Search = { tab?: TabKey | undefined; lake?: string | undefined };
@@ -42,6 +43,7 @@ export const Route = createFileRoute("/")({
 
 const TAB_META: { key: TabKey; label: string; icon: typeof MapIcon }[] = [
   { key: "map", label: "Risk map", icon: MapIcon },
+  { key: "quagga", label: "Quagga Infestation", icon: Flame },
   { key: "lake", label: "Lake detail", icon: Waves },
   { key: "septic", label: "Septic screening", icon: Droplets },
   { key: "agent", label: "Ask the agent", icon: Bot },
@@ -104,6 +106,9 @@ function Index() {
           <main className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-8">
             <TabsContent value="map" className="mt-0">
               <RiskMapTab onOpenLake={openLake} />
+            </TabsContent>
+            <TabsContent value="quagga" className="mt-0">
+              <QuaggaTab />
             </TabsContent>
             <TabsContent value="lake" className="mt-0">
               <LakeDetailTab lakeId={lake} onChangeLake={changeLake} />
