@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { CartesianGrid, Legend, Line, LineChart, ReferenceLine, ResponsiveContainer, Tooltip as RTooltip, XAxis, YAxis } from "recharts";
 import { Slider } from "@/components/ui/slider";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import {
@@ -23,6 +24,7 @@ const YEARS = allYears(MUSSEL_ROWS);
 const AREAS = [...new Map(MUSSEL_ROWS.map((r) => [areaKey(r), r])).values()]
   .map((r) => ({ key: areaKey(r), lake: r.lake, area: r.area }))
   .sort((a, b) => a.key.localeCompare(b.key));
+const LINE_COLORS = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#e377c2", "#17becf", "#7f7f7f"];
 const fmtD = (d: number | null) => (d == null ? "not reported" : `${d.toLocaleString("en-US")} /m²`);
 
 export function QuaggaTab() {
@@ -52,10 +54,15 @@ export function QuaggaTab() {
     [latest, species, year],
   );
 
-  const grid = useMemo(() => {
-    const m = new Map<string, number | null>();
-    for (const r of MUSSEL_ROWS) if (r.species === species) m.set(`${areaKey(r)}|${r.year}`, r.density);
-    return m;
+  const series = useMemo(() => {
+    const byYear = new Map<number, Record<string, number | null>>();
+    for (const r of MUSSEL_ROWS) {
+      if (r.species !== species) continue;
+      const row = byYear.get(r.year) ?? { year: r.year };
+      row[areaKey(r)] = r.density;
+      byYear.set(r.year, row);
+    }
+    return [...byYear.values()].sort((x, y) => (x.year as number) - (y.year as number));
   }, [species]);
 
   return (
@@ -122,50 +129,25 @@ export function QuaggaTab() {
 
       <section className="space-y-3">
         <div>
-          <h2 className="text-xl font-semibold">Density heat map by lake and area</h2>
+          <h2 className="text-xl font-semibold">Density over time by lake and area</h2>
           <p className="text-sm text-muted-foreground">
-            {species} mussels per m² for every survey year. The chosen year is outlined.
+            {species} mussels per m² in each survey year. The dashed line marks the chosen year.
           </p>
         </div>
-        <div className="overflow-x-auto rounded-xl border border-border bg-card p-3">
-          <table className="border-separate border-spacing-0.5 text-xs">
-            <thead>
-              <tr>
-                <th className="sticky left-0 bg-card pr-3 text-left font-medium text-muted-foreground">Lake / area</th>
-                {YEARS.map((y) => (
-                  <th key={y} className={`px-1 font-medium ${y === year ? "text-primary" : "text-muted-foreground"}`}>
-                    {String(y).slice(2)}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {AREAS.map((a) => (
-                <tr key={a.key}>
-                  <td className="sticky left-0 whitespace-nowrap bg-card pr-3">
-                    <span className="font-medium">{a.lake}</span>{" "}
-                    <span className="text-muted-foreground">{a.area}</span>
-                  </td>
-                  {YEARS.map((y, i) => {
-                    const k = `${a.key}|${y}`;
-                    const has = grid.has(k);
-                    const d = grid.get(k) ?? null;
-                    return (
-                      <td
-                        key={y}
-                        title={has ? `${a.lake} ${a.area}, ${y}: ${fmtD(d)}` : `${y}: no survey`}
-                        onClick={() => setIdx(i)}
-                        className={`h-7 w-9 cursor-pointer rounded-sm text-center text-[10px] ${y === year ? "ring-2 ring-primary" : ""}`}
-                        style={{ backgroundColor: has ? heatColor(d) : "transparent", color: d != null && d >= 5000 ? "#fff" : undefined }}
-                      >
-                        {has && d != null && d >= 1000 ? `${Math.round(d / 100) / 10}k` : has && d != null ? Math.round(d) : ""}
-                      </td>
-                    );
-                  })}
-                </tr>
+        <div className="h-[420px] rounded-xl border border-border bg-card p-3">
+          <ResponsiveContainer width="100%" height="100%">
+            <LineChart data={series} margin={{ top: 10, right: 20, bottom: 20, left: 10 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
+              <XAxis dataKey="year" type="number" domain={[YEARS[0]!, YEARS[YEARS.length - 1]!]} tickCount={10} allowDecimals={false} label={{ value: "Year", position: "insideBottom", offset: -10 }} />
+              <YAxis tickFormatter={(v: number) => v.toLocaleString("en-US")} label={{ value: "Mussels per m²", angle: -90, position: "insideLeft", offset: 0 }} width={80} />
+              <RTooltip formatter={(v, name) => [fmtD(v as number | null), String(name).replace("|", " — ")]} />
+              <Legend wrapperStyle={{ fontSize: 12, paddingTop: 16 }} formatter={(v: string) => v.replace("|", " — ")} />
+              <ReferenceLine x={year} stroke="var(--primary)" strokeDasharray="4 4" />
+              {AREAS.map((a, i) => (
+                <Line key={a.key} dataKey={a.key} name={a.key} type="monotone" connectNulls stroke={LINE_COLORS[i % LINE_COLORS.length]} strokeWidth={2} dot={{ r: 3 }} isAnimationActive={false} />
               ))}
-            </tbody>
-          </table>
+            </LineChart>
+          </ResponsiveContainer>
         </div>
       </section>
     </div>

@@ -25,11 +25,11 @@ function AreasLayer({ areas }: { areas: MapArea[] }) {
     const layer = L.layerGroup();
     for (const a of areas) {
       const g = L.geoJSON(a.geometry as GeoJSON.GeoJsonObject, {
-        style: { color: "rgba(40,60,80,0.7)", weight: 1, fillColor: a.color, fillOpacity: 0.85 },
+        style: { color: "#1b2a38", weight: 2.5, fillColor: a.color, fillOpacity: 0.8 },
       });
       g.bindTooltip(a.tooltip, { sticky: true, className: "lake-tip" });
-      g.on("mouseover", () => g.setStyle({ weight: 2.5 }));
-      g.on("mouseout", () => g.setStyle({ weight: 1 }));
+      g.on("mouseover", () => g.setStyle({ weight: 4.5 }));
+      g.on("mouseout", () => g.setStyle({ weight: 2.5 }));
       layer.addLayer(g);
     }
     layer.addTo(map);
