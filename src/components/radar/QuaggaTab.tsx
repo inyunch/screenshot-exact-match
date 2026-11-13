@@ -62,7 +62,7 @@ export function QuaggaTab() {
       row[areaKey(r)] = r.density;
       byYear.set(r.year, row);
     }
-    return [...byYear.values()].sort((x, y) => (x.year as number) - (y.year as number));
+    return [...byYear.values()].sort((x, y) => (x["year"] as number) - (y["year"] as number));
   }, [species]);
 
   return (
