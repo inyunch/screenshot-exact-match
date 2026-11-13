@@ -12,6 +12,34 @@ export type MapPoint = {
   tooltip: string; // pre-escaped HTML
 };
 
+export type MapArea = {
+  id: string;
+  geometry: GeoJSON.Geometry;
+  color: string;
+  tooltip: string; // pre-escaped HTML
+};
+
+function AreasLayer({ areas }: { areas: MapArea[] }) {
+  const map = useMap();
+  useEffect(() => {
+    const layer = L.layerGroup();
+    for (const a of areas) {
+      const g = L.geoJSON(a.geometry as GeoJSON.GeoJsonObject, {
+        style: { color: "rgba(40,60,80,0.7)", weight: 1, fillColor: a.color, fillOpacity: 0.85 },
+      });
+      g.bindTooltip(a.tooltip, { sticky: true, className: "lake-tip" });
+      g.on("mouseover", () => g.setStyle({ weight: 2.5 }));
+      g.on("mouseout", () => g.setStyle({ weight: 1 }));
+      layer.addLayer(g);
+    }
+    layer.addTo(map);
+    return () => {
+      layer.remove();
+    };
+  }, [map, areas]);
+  return null;
+}
+
 function PointsLayer({
   points,
   onSelect,
@@ -49,7 +77,9 @@ export default function LakeMap({
   onSelect,
   center = [44.6, -85.4],
   zoom = 6,
+  areas,
 }: {
+  areas?: MapArea[] | undefined;
   points: MapPoint[];
   onSelect?: ((id: string) => void) | undefined;
   center?: [number, number];
@@ -68,6 +98,7 @@ export default function LakeMap({
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
+      {areas && <AreasLayer areas={areas} />}
       <PointsLayer points={points} onSelect={onSelect} />
     </MapContainer>
   );

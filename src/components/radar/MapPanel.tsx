@@ -1,6 +1,6 @@
 import { lazy, Suspense } from "react";
 import { ClientOnly } from "@tanstack/react-router";
-import type { MapPoint } from "./LakeMap";
+import type { MapArea, MapPoint } from "./LakeMap";
 
 const LakeMap = lazy(() => import("./LakeMap"));
 
@@ -20,7 +20,11 @@ export function MapPanel({
   center,
   zoom,
   footer,
+  areas,
+  heightClass,
 }: {
+  areas?: MapArea[];
+  heightClass?: string;
   center?: [number, number];
   zoom?: number;
   footer?: string;
@@ -31,13 +35,13 @@ export function MapPanel({
 }) {
   return (
     <div className="space-y-2">
-      <div className="map-frame h-[420px] sm:h-[540px]">
+      <div className={`map-frame ${heightClass ?? "h-[420px] sm:h-[540px]"}`}>
         {loading ? (
           <MapPlaceholder label="Loading all lakes…" />
         ) : (
           <ClientOnly fallback={<MapPlaceholder label="Loading map…" />}>
             <Suspense fallback={<MapPlaceholder label="Loading map…" />}>
-              <LakeMap points={points} onSelect={onSelect} {...(center ? { center } : {})} {...(zoom ? { zoom } : {})} />
+              <LakeMap points={points} areas={areas} onSelect={onSelect} {...(center ? { center } : {})} {...(zoom ? { zoom } : {})} />
             </Suspense>
           </ClientOnly>
         )}
