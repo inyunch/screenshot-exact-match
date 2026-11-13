@@ -2,7 +2,6 @@ import { useMemo, useState } from "react";
 import { Slider } from "@/components/ui/slider";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import {
-  AREA_COORDS,
   HEAT_STOPS,
   MUSSEL_ROWS,
   allYears,
@@ -12,7 +11,12 @@ import {
 } from "@/lib/mussel-rules";
 import { escapeHtml } from "@/lib/lake-rules";
 import { MapPanel } from "./MapPanel";
-import type { MapPoint } from "./LakeMap";
+import type { MapArea } from "./LakeMap";
+import shapes from "@/data/great-lakes-areas.json";
+
+const SHAPES = (shapes as { features: { properties: { key: string }; geometry: GeoJSON.Geometry }[] }).features.filter(
+  (f) => f.properties.key !== "Erie|Lakewide",
+);
 import { Notice } from "./Notice";
 
 const YEARS = allYears(MUSSEL_ROWS);
@@ -28,25 +32,23 @@ export function QuaggaTab() {
 
   const latest = useMemo(() => latestAsOf(MUSSEL_ROWS, species, year), [species, year]);
 
-  const points = useMemo<MapPoint[]>(
+  const areas = useMemo<MapArea[]>(
     () =>
-      [...latest.values()]
-        .filter((r) => AREA_COORDS[areaKey(r)])
-        .map((r) => {
-          const [lat, lon] = AREA_COORDS[areaKey(r)]!;
-          return {
-            id: areaKey(r),
-            lat,
-            lon,
-            color: heatColor(r.density),
-            radius: 16,
-            tooltip:
-              `<strong>Lake ${escapeHtml(r.lake)} — ${escapeHtml(r.area)}</strong>` +
+      SHAPES.map((f) => {
+        const r = latest.get(f.properties.key);
+        const [lake, area] = f.properties.key.split("|") as [string, string];
+        return {
+          id: f.properties.key,
+          geometry: f.geometry,
+          color: r ? heatColor(r.density) : "#ffffff",
+          tooltip: r
+            ? `<strong>Lake ${escapeHtml(lake)} — ${escapeHtml(area)}</strong>` +
               `${escapeHtml(species)} density: ${escapeHtml(fmtD(r.density))}<br/>` +
               `<span>Survey year:</span> ${r.year}${r.year !== year ? " (latest available)" : ""}<br/>` +
-              `<span>Status:</span> ${escapeHtml(r.status.replace(/_/g, " "))}`,
-          };
-        }),
+              `<span>Status:</span> ${escapeHtml(r.status.replace(/_/g, " "))}`
+            : `<strong>Lake ${escapeHtml(lake)} — ${escapeHtml(area)}</strong>No survey by ${year}`,
+        };
+      }),
     [latest, species, year],
   );
 
@@ -106,13 +108,15 @@ export function QuaggaTab() {
       </div>
 
       <MapPanel
-        points={points}
-        center={[45.2, -83.5]}
-        zoom={5}
-        footer={`${points.length} areas with a survey by ${year}`}
+        points={[]}
+        areas={areas}
+        bounds={[[41.4, -92.1], [49.0, -75.8]]}
+        heightClass="h-[480px] sm:h-[640px]"
+        footer={`${latest.size} areas with a survey by ${year} · Erie basins shown separately`}
         legend={[
           ...HEAT_STOPS.map((s) => ({ label: `${s.label} /m²`, color: s.color })),
           { label: "Not reported", color: heatColor(null) },
+          { label: "No survey yet", color: "#ffffff" },
         ]}
       />
 
