@@ -17,7 +17,13 @@ export function MapPanel({
   onSelect,
   loading,
   legend,
+  center,
+  zoom,
+  footer,
 }: {
+  center?: [number, number];
+  zoom?: number;
+  footer?: string;
   points: MapPoint[];
   onSelect?: ((id: string) => void) | undefined;
   loading?: boolean;
@@ -31,7 +37,7 @@ export function MapPanel({
         ) : (
           <ClientOnly fallback={<MapPlaceholder label="Loading map…" />}>
             <Suspense fallback={<MapPlaceholder label="Loading map…" />}>
-              <LakeMap points={points} onSelect={onSelect} />
+              <LakeMap points={points} onSelect={onSelect} {...(center ? { center } : {})} {...(zoom ? { zoom } : {})} />
             </Suspense>
           </ClientOnly>
         )}
@@ -47,7 +53,7 @@ export function MapPanel({
           </span>
         ))}
         <span className="ml-auto">
-          {points.length.toLocaleString("en-US")} lakes shown · circle size grows with lake area
+          {footer ?? `${points.length.toLocaleString("en-US")} lakes shown · circle size grows with lake area`}
         </span>
       </div>
     </div>
